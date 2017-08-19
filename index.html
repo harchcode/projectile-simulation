@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Projectile Simulation</title>
+    </head>
+
+    <body>          
+        <div id="ui">
+            <fieldset>
+                <legend>Options*</legend>
+                <label>M
+                    <input id="mass" type="text" value="0.625" /> kg
+                </label><br />
+                <label>R
+                    <input id="radius" type="text" value="0.1143" /> m
+                </label><br />
+                <label>D
+                    <input id="drag" type="text" value="0.25" /> kg/(m^3)
+                </label><br />
+                <label>P
+                    <input id="density" type="text" value="1.225" /> kg/(m^3)
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Initial Velocity</legend>
+                <label>X
+                    <input id="vx" type="text" value="5" /> m/s
+                </label><br />
+                <label>Y 
+                    <input id="vy" type="text" value="10" /> m/s
+                </label><br />
+                <label>Z 
+                    <input id="vz" type="text" value="20" /> m/s
+                </label>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Wind Velocity</legend>
+                <label>X
+                    <input type="text" id="wx" value="10" /> m/s
+                </label><br />
+                <label>Y 
+                    <input type="text" id="wy" value="0" /> m/s
+                </label><br />
+                <label>Z 
+                    <input type="text" id="wz" value="-15" /> m/s
+                </label>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Angular Velocity</legend>
+                <label>X
+                    <input type="text" id="ax" value="0" /> rad/s
+                </label><br />
+                <label>Y 
+                    <input type="text" id="ay" value="300" /> rad/s
+                </label><br />
+                <label>Z 
+                    <input type="text" id="az" value="0" /> rad/s
+                </label>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Camera Mode</legend>
+                <label>
+                    <input id="free" type="radio" name="camera" checked /> Free
+                </label> <br />
+                <label>
+                    <input id="fixed" type="radio" name="camera" /> Fixed
+                </label> <br />
+                <label>
+                    <input id="bullet" type="radio" name="camera" /> Bullet
+                </label>
+            </fieldset>
+
+            <p class="buttons">
+                <button id="fire">FIRE!</button>
+                <button id="random">Randomize</button>
+            </p>
+
+            <footer>
+                *) M is mass of sphere, R is radius of sphere, D is drag coefficient, and P is density of air.
+            </footer>
+        </div>
+
+        <canvas id="simulator">
+            Your browser does not support WebGL. Go update!
+        </canvas>
+
+        <script src="./dist/build.js"></script>
+    </body>
+</html>
